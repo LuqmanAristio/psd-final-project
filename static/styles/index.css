@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+    box-sizing: border-box;
+    color: #2D2D2D;
+}
+
+body{
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.navBar{
+    top: 0;
+    background: #FFF;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.25);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 8em;
+}
+
+.navBar h1{
+    font-weight: 900;
+    font-size: 1.5em;
+}
+
+.navBar h3{
+    font-weight: 600;
+    color: white;
+    padding: 0.6em 2em;
+    box-sizing: border-box;
+    background-color: #DF4C27;
+    border-radius: 0.2em;
+}
+
+.mainContent{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 9em 0;
+}
+
+.gap{
+    width: 1em;
+}
+
+.infoContent{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.infoContent img{
+    width: 90%;
+    padding: 1em 1em;
+}
+
+.infoContent h1{
+    font-weight: 900;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.infoContent h4{
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-top: 0.5em;
+}
+
+.name{
+    background-color: #f5af24;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    margin-left: 0.5em;
+    color: white;
+    border-radius: 5px;
+}
+
+.uploadContent{
+    width: 40%;
+    background: #FFF;
+    box-shadow: 0px 0px 16.8px 3px rgba(0, 0, 0, 0.15);
+    height: 32em;
+    padding: 3em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    position: relative;
+}
+
+.textFile{
+    background-color: #91423A;
+    color: white;
+    font-weight: 600;
+    padding: 0.5em 1.5em;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.textFile:hover{
+    background-color: #EA3609;
+}
+
+form button{
+    background-color: #2D2D2D;
+    color: white;
+    padding: 0.5em 1.5em;
+    font-size: 1.2em;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    border: none;
+}
+
+form button:hover{
+    background-color: #1b1b1b;
+}
+
+
+input[type="file"] {
+    display: none;
+}
+
+.uploadContent h3{
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1.5em;
+    font-size: 1em;
+}
+
+.uploadContent h3 a{
+    font-weight: bold;
+}
+
+.mainResult{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 90vh;
+    justify-content: center;
+}
+
+.leftResult{
+    width: 35%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.leftResult img{
+    width: 70%;
+    object-fit: cover;
+}
+
+.rightResult{
+    width: 35%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rightResult h1{
+    background-color: #91423A;
+    color: white;
+    border-radius: 0.2em;
+    padding: 0.3em 2em;
+    font-weight: 700;
+    font-size: 1.4vw;
+}
+
+.predictionResult{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.predictionResult h3{
+    font-weight: 700;
+    font-size: 1.2vw;
+    margin-top: 2em;
+}
+
+.predictionResult h4{
+    margin-top: 0.2em;
+    font-weight: 600;
+    font-size: 1vw;
+}
+
+.rightResult a{
+    text-decoration: none;
+    background-color: #272727;
+    color: white;
+    font-weight: 700;
+    padding: 0.5em 2em;
+    margin-top: 4em;
+    border-radius: 0.5em;
+}
+
+.rightResult a:hover{
+    background-color: #101010;
+}
+
+#loading-text{
+    margin-top: 1em;
+}

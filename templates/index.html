@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Genre Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+</head>
+<script>
+    function displayFileName() {
+        const fileInput = document.getElementById('file');
+        const fileNameDisplay = document.getElementById('file-name');
+
+        if (fileInput.files.length > 0) {
+            fileNameDisplay.textContent = fileInput.files[0].name;
+        } else {
+            fileNameDisplay.textContent = 'Choose File';
+        }
+    }
+
+    function showLoadingText() {
+            document.getElementById('loading-text').style.display = 'block';
+        }
+</script>
+<body>
+    <div class="navBar">
+        <h1>Music Genre Classification</h1>
+        <h3>PSD Final Project</h3>
+    </div>
+    <div class="mainContent">
+        <div class="infoContent">
+            <img src="../static/image/music.avif" alt="">
+            <h1>Music Genre Classification</h1>
+            <h4>Method : <span class="name">VGG16 - CNN Algorithm</span></h4>
+        </div>
+        <div class="gap">
+
+        </div>
+        <div class="uploadContent">
+            <form action="/upload" method="post" enctype="multipart/form-data" onsubmit="showLoadingText()">
+                <label for="file" class="custom-file-upload">
+                    <span class="textFile" id="file-name">Choose File</span>
+                </label>
+                <input type="file" name="file" id="file" accept="audio/*" onchange="displayFileName()">
+                <button type="submit" class="textUpload">Upload</button>
+            </form>
+            <p id="loading-text" style="display: none;">Mohon tunggu beberapa saat...</p>
+            
+            <h3>Tidak punya sampel? <a href="https://drive.google.com/drive/folders/1IczExgjOKkOdtPhtPdcNGyMAOF3Lq_YP?usp=sharing" target="_blank">Coba download disini!</a> </h3>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

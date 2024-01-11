@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Processing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}">
+</head>
+<body>
+    <div class="navBar">
+        <h1>EEG Motor Movement System</h1>
+        <h3>Machine Learning Final Project</h3>
+    </div>
+    {% if result_path %}
+    <div class="mainResult">
+        <div class="leftResult">
+            <img src="{{ url_for('static', filename='result_image.jpg') }}" alt="Uploaded Image">
+        </div>
+        <div class="rightResult">
+            <h1>Result</h1>
+
+            <div class="predictionResult">
+                <h3>Predicted Class: {{ prediction_result.predicted_class }}</h3>
+                <h4>Confidence: {{ '%.2f'|format(prediction_result.confidence * 100) }}%</h4>
+            </div>
+            
+            <a href="{{ url_for('reset_result_path') }}">Back to Home</a>
+            
+        </div>
+    </div>
+    {% else %}
+        <script>
+            window.location.replace("/");
+        </script>
+    {% endif %}
+</body>
+</html>
